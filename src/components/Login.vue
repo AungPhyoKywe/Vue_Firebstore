@@ -6,6 +6,7 @@
 
 <script>
 import firebase from 'firebase'
+
 export default {
   methods: {
     loginSubmit() {
@@ -22,6 +23,7 @@ export default {
   width: 100%;
   text-align: center;
   padding-top: 50px;
+
   button {
     width: 50%;
     background-color: #4e37fc;
@@ -33,6 +35,7 @@ export default {
     border: none;
     box-shadow: #00000040 0px 5px 10px;
     cursor: pointer;
+
     &:hover {
       background-color: #7562ff;
     }

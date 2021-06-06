@@ -10,10 +10,11 @@
 import Login from './components/Login'
 import Chat from './components/Chat'
 import firebase from 'firebase'
+
 export default {
   data(){
     return{
-      user:firebase.auth().currentUser,
+      user: firebase.auth().currentUser,
 
     }
   },
