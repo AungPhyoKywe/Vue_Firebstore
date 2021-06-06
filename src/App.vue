@@ -1,17 +1,26 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+
+    <Chat v-if="user"></Chat>
+    <Login v-else></Login>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import Login from './components/Login'
+import Chat from './components/Chat'
+import firebase from 'firebase'
 export default {
+  data(){
+    return{
+      user:firebase.auth().currentUser,
+
+    }
+  },
   name: 'App',
   components: {
-    HelloWorld
+    Login,
+    Chat,
   }
 }
 </script>
